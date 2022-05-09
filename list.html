@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+    <link rel="stylesheet" href="./list.css">
+</head>
+<body>
+    <ol class="ol">
+        <p > This is an ordered technologies list</p>
+        <li>HTML</li>
+        <li>Javascript</li>
+        <li>CSS</li>
+        <li>React</li>
+        <li>Redux</li>
+        <li>Java</li>
+        <input type="text" id="completed"/>
+        <button onclick="addItem()">add item</button>    
+    </ol>
+
+    <ul class="ul">
+        <p> This is an unordered technologies list</p>
+        <li>HTML</li>
+        <li>Javascript</li>
+        <li>CSS</li>
+        <li>React</li>
+        <li>Redux</li>
+        <li>Java</li>
+        <input type="text" id="todo"/>
+        <button onclick="removeItem()">remove item</button>
+    </ul>
+
+    <script>
+
+     
+    
+    function addItem(){
+    var order = document.getElementsByClassName('ol');
+    var completed = document.getElementById('completed');
+    var li = document.createElement('li');
+    li.setAttribute('id',completed.value);
+    li.appendChild(document.createTextNode(completed.value));
+    ul.appendChild(li);
+}
+
+function removeItem(){
+    var unorder = document.getElementsByClassName('ul');
+    var todo = document.getElementById('todo');
+    var item = document.getElementById(todo.value);
+    ul.removeChild(item);
+}
+
+    </script>
+</body>
+</html>

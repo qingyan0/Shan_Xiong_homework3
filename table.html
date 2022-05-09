@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Age</th>
+                <th>Phone </th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="demo"></tbody>
+    </table>
+    
+<script>
+     const data = [
+            {
+                'Student Nmae':'John',
+                Age:19,
+                Phone:'455-983-0903',
+                Address: '123 Ave, San Francisco, CA, 94011',
+            },
+            {
+                'Student Nmae':'Alex',
+                Age:21,
+                Phone:'455-983-0912',
+                Address: '456 Rd, San Francisco, CA, 94012',
+            },
+            {
+                'Student Nmae':'Josh',
+                Age:22,
+                Phone:'455-345-0912',
+                Address: '789 Dr,Newark, CA, 94016',
+            },
+        ];
+
+        const tbody = document.getElementById('demo')
+            for (var i =0; i<data.length; i++){
+                const tr = document.createElement('tr');
+                tbody.appendChild(tr);
+                for (var k in data[i]) {
+                    const td = document.createElement('td');
+                    td.innerHTML = data[i][k];
+                    tr.appendChild(td);
+                }
+            }
+
+
+</script>
+</body>
+</html>
+
+
+        
+
+    
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
